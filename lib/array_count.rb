@@ -1,13 +1,13 @@
 def count_strings(array)
   # Return the total number of strings in the provided array using the count enumerable
   array.count do |element|
-    element.include?(String)
+    element.is_a?(String)
   end
 end
 
 def count_empty_strings(array)
   # Return the total number of EMPTY strings in the provided array using the count enumerable
   array.count do |element|
-    element.include?(String) && element.length == 0 
+    element.is_a?(String) && element.length == 0 
   end
 end
